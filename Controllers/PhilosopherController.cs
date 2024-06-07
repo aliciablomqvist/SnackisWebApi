@@ -20,15 +20,14 @@ namespace SnackisWebbAPI.Controllers
             _context = context;
         }
 
-        // GET: api/Dailyphilosophers
-[HttpGet]
-public async Task<ActionResult<IEnumerable<Philosopher>>> GetDailyphilosophers()
-{
-    return await _context.Philosopher.ToListAsync();
-}
+        // GET: Get all philosophers
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<Philosopher>>> GetDailyphilosophers()
+        {
+            return await _context.Philosopher.ToListAsync();
+        }
 
-
-        // GET: api/Dailyphilosophers/5
+        // GET: Get all philosophers by id
         [HttpGet("{id}")]
         public async Task<ActionResult<Philosopher>> GetDailyphilosopher(int id)
         {
@@ -42,7 +41,7 @@ public async Task<ActionResult<IEnumerable<Philosopher>>> GetDailyphilosophers()
             return philosopher;
         }
 
-        // POST: api/Dailyphilosophers
+        // POST : Add a new Philosopher
         [HttpPost]
         public async Task<ActionResult<Philosopher>> PostDailyphilosopher(Philosopher philosopher)
         {
@@ -52,7 +51,7 @@ public async Task<ActionResult<IEnumerable<Philosopher>>> GetDailyphilosophers()
             return CreatedAtAction(nameof(GetDailyphilosopher), new { id = philosopher.Id }, philosopher);
         }
 
-        // PUT: api/Dailyphilosophers/5
+        // PUT : Update an existing philosopher
         [HttpPut("{id}")]
         public async Task<IActionResult> PutDailyphilosopher(int id, Philosopher philosopher)
         {
@@ -82,7 +81,7 @@ public async Task<ActionResult<IEnumerable<Philosopher>>> GetDailyphilosophers()
             return NoContent();
         }
 
-        // DELETE: api/Dailyphilosophers/5
+        // DELETE :  Remove a philosopher by ID
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteDailyphilosopher(int id)
         {
@@ -98,6 +97,7 @@ public async Task<ActionResult<IEnumerable<Philosopher>>> GetDailyphilosophers()
             return NoContent();
         }
 
+        // Check if a philosopher exists by ID
         private bool DailyphilosopherExists(int id)
         {
             return _context.Philosopher.Any(e => e.Id == id);

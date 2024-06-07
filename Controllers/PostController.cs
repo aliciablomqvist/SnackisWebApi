@@ -20,14 +20,14 @@ namespace SnackisWebbAPI.Controllers
             _context = context;
         }
 
-        // GET: api/Discussions
+        // GET: Retrieve all discussions
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Post>>> GetDiscussions()
         {
             return await _context.Post.Include(d => d.User).ToListAsync();
         }
 
-        // GET: api/Discussions/5
+        // GET: Retrieve a specific discussion by ID
         [HttpGet("{id}")]
         public async Task<ActionResult<Post>> GetDiscussion(int id)
         {
@@ -41,7 +41,7 @@ namespace SnackisWebbAPI.Controllers
             return post;
         }
 
-        // POST: api/Discussions
+        // POST: Add a new discussion
         [HttpPost]
         public async Task<ActionResult<Post>> PostDiscussion(Post post)
         {
@@ -52,7 +52,7 @@ namespace SnackisWebbAPI.Controllers
             return CreatedAtAction(nameof(GetDiscussion), new { id = post.Id }, post);
         }
 
-        // PUT: api/Discussions/5
+        // PUT: Update an existing discussion
         [HttpPut("{id}")]
         public async Task<IActionResult> PutDiscussion(int id, Post post)
         {
@@ -82,7 +82,7 @@ namespace SnackisWebbAPI.Controllers
             return NoContent();
         }
 
-        // DELETE: api/Discussions/5
+        // DELETE: Remove a discussion by ID
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteDiscussion(int id)
         {
@@ -98,6 +98,7 @@ namespace SnackisWebbAPI.Controllers
             return NoContent();
         }
 
+        // Check if a discussion exists by ID
         private bool DiscussionExists(int id)
         {
             return _context.Post.Any(e => e.Id == id);

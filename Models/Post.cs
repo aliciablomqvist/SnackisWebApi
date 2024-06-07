@@ -3,14 +3,14 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SnackisWebbAPI.Models
 {
-public class Post
-{
-    public int Id { get; set; }
-    public string Title { get; set; }
-    public string Content { get; set; }
-    public string Image { get; set; }
-    public DateTime Date { get; set; }
-    public string UserId { get; set; }
+    public class Post
+    {
+        public int Id { get; set; }
+        public string Title { get; set; }
+        public string Content { get; set; }
+        public string Image { get; set; }
+        public DateTime Date { get; set; }
+        public string UserId { get; set; }
 
         [ForeignKey("UserId")]
         public SnackisUser User { get; set; }
@@ -24,5 +24,5 @@ public class Post
 
         [ForeignKey("SubCategoryId")]
         public SubCategory SubCategory { get; set; }
-}
+    }
 }

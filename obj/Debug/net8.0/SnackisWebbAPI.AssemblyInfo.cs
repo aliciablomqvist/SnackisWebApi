@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SnackisWebbAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7264964421a114089a7e9879ec0a2bacd4537125")]
 [assembly: System.Reflection.AssemblyProductAttribute("SnackisWebbAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SnackisWebbAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

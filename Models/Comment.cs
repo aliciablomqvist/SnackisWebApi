@@ -1,6 +1,5 @@
 using System;
 using System.ComponentModel.DataAnnotations;
-
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SnackisWebbAPI.Models
@@ -21,8 +20,7 @@ namespace SnackisWebbAPI.Models
         [Required]
         public DateTime Date { get; set; }
 
-
-        //Replies
+        //Comment replies
         public int? ParentCommentId { get; set; }
 
         public Comment ParentComment { get; set; }

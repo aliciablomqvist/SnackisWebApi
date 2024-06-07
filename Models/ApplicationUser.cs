@@ -5,7 +5,6 @@ namespace SnackisWebbAPI.Models
 {
     public class SnackisUser : IdentityUser
     {
-  [Required]
-            public string ProfileImageUrl { get; set; }
+        public string ProfileImageUrl { get; set; }
     }
 }

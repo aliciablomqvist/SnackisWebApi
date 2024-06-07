@@ -3177,11 +3177,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/jack.blomqvist/Desktop/SnackisProject/SnackisWebbAPI/SnackisWebbAPI.csproj",
+      "projectUniqueName": "/Users/jack.blomqvist/Desktop/SnackisProject/SnackisWebAPI/SnackisWebbAPI.csproj",
       "projectName": "SnackisWebbAPI",
-      "projectPath": "/Users/jack.blomqvist/Desktop/SnackisProject/SnackisWebbAPI/SnackisWebbAPI.csproj",
+      "projectPath": "/Users/jack.blomqvist/Desktop/SnackisProject/SnackisWebAPI/SnackisWebbAPI.csproj",
       "packagesPath": "/Users/jack.blomqvist/.nuget/packages/",
-      "outputPath": "/Users/jack.blomqvist/Desktop/SnackisProject/SnackisWebbAPI/obj/",
+      "outputPath": "/Users/jack.blomqvist/Desktop/SnackisProject/SnackisWebAPI/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/jack.blomqvist/.nuget/NuGet/NuGet.Config"

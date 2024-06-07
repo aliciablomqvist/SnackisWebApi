@@ -14,20 +14,18 @@ builder.Services.AddIdentity<SnackisUser, IdentityRole>(options => options.SignI
     .AddDefaultTokenProviders();
 
 builder.Services.AddControllers();
-
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Description = "Testing my API", Version = "v1" });
 });
 
-// Lägg till CORS-tjänsten och konfigurera policyn
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowSpecificOrigins",
         builder =>
         {
-            builder.WithOrigins("https://localhost:7262", "http://localhost:5287") // Lägg till rätt URL:er för ditt Razor Pages-projekt
+            builder.WithOrigins("https://localhost:7262", "http://localhost:5287")
                    .AllowAnyHeader()
                    .AllowAnyMethod();
         });
@@ -46,7 +44,6 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-// Använd CORS-policyn
 app.UseCors("AllowSpecificOrigins");
 
 app.UseAuthorization();
